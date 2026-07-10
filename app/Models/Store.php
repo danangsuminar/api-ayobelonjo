@@ -27,4 +27,10 @@ class Store extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    // Relationship: ONE STORE only has ONE Store Balance
+    public function storeBalance()
+    {
+        return $this->hasOne(StoreBalance::class);
+    }
 }
