@@ -16,7 +16,7 @@ return new class extends Migration
             $table->uuid('product_id');
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
             $table->string('image');
-            $table->boolean('is_thumbnail')->default('false');
+            $table->boolean('is_thumbnail')->default(false);
             $table->timestamps();
         });
     }
