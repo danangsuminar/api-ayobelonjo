@@ -33,4 +33,10 @@ class Store extends Model
     {
         return $this->hasOne(StoreBalance::class);
     }
+
+    // Relationship: ONE WALLET has MANY HISTORIES
+    public function storeBalanceHistories()
+    {
+        return $this->hasMany(StoreBalanceHistory::class);
+    }
 }
