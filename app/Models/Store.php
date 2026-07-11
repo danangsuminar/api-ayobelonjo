@@ -34,4 +34,9 @@ class Store extends Model
         return $this->hasOne(StoreBalance::class);
     }
 
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
+
 }
